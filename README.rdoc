@@ -4,7 +4,7 @@ This project rocks and uses MIT-LICENSE.
 
 
 Add to gemfile
- -gem 'et_cms', :path => "https://github.com/entretechno/et-cms.git"
+ -gem 'et_cms', :git => "git@github.com:entretechno/et-cms.git"
 
 Add to routes
  -mount EtCms::Engine => '/cms'
