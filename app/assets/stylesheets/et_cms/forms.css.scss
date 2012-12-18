@@ -1,0 +1,33 @@
+form {
+
+  li {
+    list-style-type: none;
+    label {
+      width: 130px;
+      color: black !important;
+      background-color: white !important;
+
+    }
+  }
+  label {
+    font-size: 12px;
+    font-weight: bold;
+    width: 130px;
+    color: black !important;
+    background-color: white !important;
+    padding-left: 4px;
+
+  }
+}
+
+.btn {
+  margin-top: 5px;
+}
+
+#page_parent_id_input {
+  padding-top: 10px;
+}
+
+.left {
+  float: left;
+}

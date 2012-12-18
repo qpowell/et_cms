@@ -1,0 +1,18 @@
+<%= semantic_form_for @page do |f| %>
+    <%= f.input :name %>
+    <%= f.input :browser_title %>
+    <%= f.input :content, :as => :ckeditor, :input_html => {:height => 400}, :label => false %>
+    <%= f.input :parent_id %>
+    <%= f.input :meta_description %>
+    <%= f.label :exclude_from_menu, :class => "left" %>
+    <%= f.check_box :exclude_from_menu %>
+    <div style="clear:both;"></div>
+    <%= f.input :link_url %>
+    <%= f.input :list_order %>
+    <%= f.input :status %>
+
+    <%= f.actions do %>
+        <%= f.action :submit, :as => :button, :button_html => {:class => "btn btn-success"} %>
+        <%= f.action :cancel, :as => :link, :button_html => {:class => "btn btn-warning"} %>
+    <% end %>
+<% end %>
