@@ -1,4 +1,5 @@
 EtCms::Engine.routes.draw do
+  root to: "pages#home", :via => :get
   mount Ckeditor::Engine => '/ckeditor'
 
   devise_for :users, {
@@ -6,19 +7,14 @@ EtCms::Engine.routes.draw do
       module: :devise,
   }
 
-  root to: "pages#home", :via => :get
-
-  #resources :pages
-
+  get '/pages/home'
   get '/pages/:id', :to => 'pages#show', :as => :page
 
   namespace :admin do
-    get 'pages/*path/edit', :to => 'pages#edit'
-    put 'pages/*path', :to => 'pages#update'
-    delete 'pages/*path', :to => 'pages#destroy'
+    root to: "pages#index"
     resources :pages
-
   end
 
-  #resources :pages, :path => ''
+  resources :pages
+  resources :pages, :path => ''
 end

@@ -1,11 +1,13 @@
-require_dependency "et_cms/application_controller"
-
 module EtCms
   class PagesController < ApplicationController
+
     def home
     end
-  
+
+
     def show
+      @page = Page.find(params[:id])
     end
+
   end
 end
