@@ -6,12 +6,9 @@ This project rocks and uses MIT-LICENSE.
 Add to gemfile
   gem 'et_cms', :git => "git://github.com/entretechno/et-cms.git"
 
-Add to routes
-  mount EtCms::Engine => '/cms'
 
 run
-  rake et_cms:install:migrations  #copies all migrations
-  rake railties:install:migrations #copies only missing migrations
+  rails g et_cms:install
   rake db:migrate
 
 Devise setup
