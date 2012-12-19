@@ -9,5 +9,11 @@ module EtCms
     # Setup accessible (or protected) attributes for your model
     attr_accessible :email, :password, :password_confirmation, :remember_me
     # attr_accessible :title, :body
+
+    after_create { |user| user.send_reset_password_instructions } #unless ['test', 'development'].include? Rails.env
+
+    def password_required?
+      new_record? ? false : super
+    end
   end
 end

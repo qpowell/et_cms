@@ -13,6 +13,8 @@ EtCms::Engine.routes.draw do
   namespace :admin do
     root to: "pages#index"
     resources :pages
+    resources :user, :controller => "user"
+
   end
 
   resources :pages
