@@ -5,7 +5,9 @@ Simple cms that uses, ckeditor, devise, and twitter bootstrap.
 Add to gemfile
   gem 'et_cms', :git => "git://github.com/entretechno/et-cms.git"
 
-run
+Delete my_app/public/index.html
+
+Run
   bundle install
   rails g et_cms:install
   rake db:migrate

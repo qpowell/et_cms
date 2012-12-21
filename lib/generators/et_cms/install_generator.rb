@@ -20,13 +20,13 @@ module EtCms
         route "mount EtCms::Engine, :at => '/'"
       end
 
-      #def create_migration
-      #  migration_template "ckeditor.rb", File.join('db/migrate', "create_ckeditor_assets.rb")
-      #  sleep 2
-      #  migration_template "pages.rb", File.join('db/migrate', "create_et_cms_pages.rb")
-      #  sleep 2
-      #  migration_template "users.rb", File.join('db/migrate', "devise_create_et_cms_users.rb")
-      #end
+      def create_migration
+        migration_template "ckeditor.rb", File.join('db/migrate', "create_ckeditor_assets.rb")
+        sleep 1
+        migration_template "pages.rb", File.join('db/migrate', "create_et_cms_pages.rb")
+        sleep 1
+        migration_template "users.rb", File.join('db/migrate', "devise_create_et_cms_users.rb")
+      end
 
       def copy_seeds_file
         file = File.open("#{InstallGenerator.source_root}/seeds.rb")
