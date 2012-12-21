@@ -10,7 +10,7 @@ module EtCms
     attr_accessible :email, :password, :password_confirmation, :remember_me
     # attr_accessible :title, :body
 
-    after_create { |user| user.send_reset_password_instructions } unless ['test'].include? Rails.env
+    after_create { |user| user.send_reset_password_instructions if user.password.nil? } unless ['test'].include? Rails.env
 
     def password_required?
       new_record? ? false : super

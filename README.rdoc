@@ -10,7 +10,7 @@ Delete my_app/public/index.html
 Run
   bundle install
   rails g et_cms:install
-  rake db:migrate
+  rake db:migrate && rake db:seed
   rails s
 
 Visit http://localhost:3000/admin and log in using:
@@ -19,7 +19,6 @@ Visit http://localhost:3000/admin and log in using:
 * *Password*: password
 
 Devise setup
-  ===============================================================================
 
   Some setup you must do manually if you haven't yet:
 
@@ -49,6 +48,4 @@ Devise setup
        On config/application.rb forcing your application to not access the DB
        or load models when precompiling your assets.
 
-  ===============================================================================
-
-  This project rocks and uses MIT-LICENSE.
+This project rocks and uses MIT-LICENSE.
