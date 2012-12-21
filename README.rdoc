@@ -9,6 +9,12 @@ run
   bundle install
   rails g et_cms:install
   rake db:migrate
+  rails s
+
+Visit http://localhost:3000/admin and log in using:
+
+* *User*: admin@example.com
+* *Password*: password
 
 Devise setup
   ===============================================================================
