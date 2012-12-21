@@ -2,7 +2,8 @@ module EtCms
   class PagesController < ApplicationController
 
     def home
-      @page = Page.find("Home")
+      @page = Page.find("home")
+      render "show"
     end
 
 

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EtCms</title>
+  <%= stylesheet_link_tag "et_cms/application", :media => "all" %>
+  <%= javascript_include_tag "et_cms/application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <a class="brand" href="#">ET CMS</a>
+
+      <div class="nav-collapse collapse">
+        <ul class="nav">
+          <li><%= link_to "Pages", et_cms.admin_pages_path %></li>
+          <li><%= link_to "Users", et_cms.admin_user_index_path %></li>
+          <li><%= link_to("Logout", et_cms.destroy_user_session_path, :method => :delete) %></li>
+          <li> <%= link_to "Change your password", et_cms.edit_user_registration_path %></li>
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+  </div>
+</div>
+
+<p class="notice"><%= notice %></p>
+
+<% unless alert.nil? %>
+    <p class="alert"><%= alert %></p>
+<% end %>
+<div class="container">
+  <%= yield %>
+</div>
+
+</body>
+</html>
