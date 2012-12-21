@@ -7,11 +7,11 @@ require "et_cms/version"
 Gem::Specification.new do |s|
   s.name = "et_cms"
   s.version = EtCms::VERSION
-  s.authors = ["ET"]
+  s.authors = ["Scott Olsen"]
   s.email = ["scott@entretechno.com"]
-  s.homepage = "http://entretechno.com"
+  s.homepage = "https://github.com/entretechno/et-cms"
   s.summary = "Cms that uses devise, ckeditor, and the twitter bootstraps"
-  s.description = "Sweet stuff here"
+  s.description = "Cms that uses devise, ckeditor, and the twitter bootstraps"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
