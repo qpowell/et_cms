@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    et_cms (0.0.1)
+    et_cms (0.0.2)
       ckeditor (= 3.7.3)
       coffee-rails (~> 3.2.1)
       devise (= 2.1.2)

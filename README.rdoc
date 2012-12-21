@@ -3,7 +3,7 @@
 Simple cms that uses, ckeditor, devise, and twitter bootstrap.
 
 Add to gemfile
-  gem "et_cms", "~> 0.0.1"
+  gem "et_cms"
 
 Delete my_app/public/index.html
 
