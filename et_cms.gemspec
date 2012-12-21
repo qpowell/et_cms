@@ -27,7 +27,6 @@ Gem::Specification.new do |s|
   s.add_dependency 'therubyracer', '0.10.2'
   s.add_dependency "twitter-bootstrap-rails", "2.1.9"
   s.add_dependency "devise", "2.1.2"
-  # s.add_dependency "jquery-rails"
 
   s.add_development_dependency "sqlite3"
 end

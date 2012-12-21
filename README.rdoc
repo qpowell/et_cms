@@ -1,6 +1,6 @@
 = EtCms
 
-This project rocks and uses MIT-LICENSE.
+Simple cms that uses, ckeditor, devise, and twitter bootstrap.
 
 Add to gemfile
   gem 'et_cms', :git => "git://github.com/entretechno/et-cms.git"
@@ -41,3 +41,5 @@ Devise setup
        or load models when precompiling your assets.
 
   ===============================================================================
+
+  This project rocks and uses MIT-LICENSE.
