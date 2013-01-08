@@ -18,7 +18,7 @@ module EtCms
         @page = Page.new(params[:page])
 
         if @page.save
-          redirect_to(pages_url, :notice => 'Page was successfully created.')
+          redirect_to(admin_pages_url, :notice => 'Page was successfully created.')
         else
           render :action => "new"
         end
@@ -29,7 +29,7 @@ module EtCms
 
         respond_to do |format|
           if @page.update_attributes(params[:page])
-            format.html { redirect_to(pages_url, :notice => 'Page was successfully updated.') }
+            format.html { redirect_to(admin_pages_url, :notice => 'Page was successfully updated.') }
             format.json { head :ok }
           else
             format.html { render :action => "edit" }
@@ -40,7 +40,7 @@ module EtCms
 
       def destroy
         Page.destroy(params[:id])
-        redirect_to(pages_url)
+        redirect_to(admin_pages_url)
       end
     end
   end

@@ -8,7 +8,7 @@ module EtCms
 
 
     def show
-      @page = Page.find(params[:id])
+      @page = Page.find(params[:id].downcase)
     end
 
   end

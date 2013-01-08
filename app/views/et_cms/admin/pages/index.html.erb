@@ -12,7 +12,7 @@
       <tr>
         <td><%= page.name %></td>
         <td>
-          <%= link_to 'View', page_path(page) %>&nbsp;|&nbsp; <%= link_to 'Edit', edit_admin_page_path(page) %>&nbsp;|&nbsp;<%= link_to 'Delete', admin_page_path(page), :confirm => "Are you sure?", :method => :delete %>
+          <%= link_to 'View', "/#{page.name}" %>&nbsp;|&nbsp; <%= link_to 'Edit', edit_admin_page_path(page) %>&nbsp;|&nbsp;<%= link_to 'Delete', admin_page_path(page), :confirm => "Are you sure?", :method => :delete %>
         </td>
       </tr>
   <% end %>
