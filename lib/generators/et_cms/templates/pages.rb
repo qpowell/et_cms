@@ -9,7 +9,7 @@ class CreateEtCmsPages < ActiveRecord::Migration
       t.boolean :exclude_from_menu
       t.string :link_url
       t.integer :list_order
-      t.string :status
+      t.boolean :active
       t.string :slug
 
       t.timestamps
