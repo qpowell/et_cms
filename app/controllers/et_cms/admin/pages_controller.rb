@@ -3,7 +3,7 @@ module EtCms
     class PagesController < EtCms::AdminController
 
       def index
-        @pages = Page.all
+        @menu_pages = Page.where(:exclude_from_menu => false).order("list_order ASC")
       end
 
       def new

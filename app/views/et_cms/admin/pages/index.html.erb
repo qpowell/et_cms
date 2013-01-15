@@ -9,14 +9,16 @@
   </tr>
   </thead>
   <tbody>
-  <% @pages.each do |page| %>
-      <tr>
-        <td><%= page.name %></td>
-        <td><%= page.active? ? "Yes" : "No" %></td>
-        <td>
-          <%= link_to 'View', "/#{page.name}" %>&nbsp;|&nbsp; <%= link_to 'Edit', edit_admin_page_path(page) %>&nbsp;|&nbsp;<%= link_to 'Delete', admin_page_path(page), :confirm => "Are you sure?", :method => :delete %>
-        </td>
-      </tr>
+  <% @menu_pages.each do |menu_page| %>
+      <% menu_page.subtree.each do |page| %>
+          <tr>
+            <td style="padding-left: <%= "#{page.depth * 20}px" %>;"><%= page.name %></td>
+            <td><%= page.active? ? "Yes" : "No" %></td>
+            <td>
+              <%= link_to 'View', "/#{page.name}" %>&nbsp;|&nbsp; <%= link_to 'Edit', edit_admin_page_path(page) %>&nbsp;|&nbsp;<%= link_to 'Delete', admin_page_path(page), :confirm => "Are you sure?", :method => :delete %>
+            </td>
+          </tr>
+      <% end %>
   <% end %>
   </tbody>
 </table>
