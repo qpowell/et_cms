@@ -2,7 +2,7 @@
     <%= f.input :name %>
     <%= f.input :browser_title %>
     <%= f.input :content, :as => :ckeditor, :input_html => {:height => 400}, :label => false %>
-    <%= f.input :parent_id, :as => :select, :collection => Hash[@pages.map{|b| [b.name,b.id]}] %>
+    <%= f.input :parent_id, :as => :select, :collection => Hash[@pages.map{|b| [b.name,b.id] unless b.depth > 4}] %>
     <%= f.input :meta_description %>
     <%= f.label :exclude_from_menu, :class => "left" %>
     <%= f.check_box :exclude_from_menu %>
