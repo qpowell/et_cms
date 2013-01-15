@@ -4,6 +4,7 @@
   <thead>
   <tr>
     <th>Page</th>
+    <th>Active</th>
     <th></th>
   </tr>
   </thead>
@@ -11,6 +12,7 @@
   <% @pages.each do |page| %>
       <tr>
         <td><%= page.name %></td>
+        <td><%= page.active? ? "Yes" : "No" %></td>
         <td>
           <%= link_to 'View', "/#{page.name}" %>&nbsp;|&nbsp; <%= link_to 'Edit', edit_admin_page_path(page) %>&nbsp;|&nbsp;<%= link_to 'Delete', admin_page_path(page), :confirm => "Are you sure?", :method => :delete %>
         </td>
