@@ -1,4 +1,7 @@
 form {
+  li.radio {
+    padding-left: 0 !important;
+  }
 
   li {
     list-style-type: none;
@@ -6,7 +9,22 @@ form {
       width: 130px;
       color: black !important;
       background-color: white !important;
+    }
 
+    fieldset {
+      display: inline-block !important;
+      ol {
+        display: inline-block !important;
+        li {
+          display: inline-block !important;
+        }
+      }
+
+      legend.label {
+        background-color: white !important;
+        border: none;
+        display: inline-block !important;
+      }
     }
   }
   label {
