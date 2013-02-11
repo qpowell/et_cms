@@ -11,8 +11,6 @@ module EtCms
 
       def create
         @user = User.new(params[:user])
-        @user.password = 'password'
-        @user.password_confirmation = 'password'
 
         if @user.save
           redirect_to(admin_user_index_url, :notice => 'User was successfully created.')
