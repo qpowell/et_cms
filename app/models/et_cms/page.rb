@@ -6,6 +6,8 @@ module EtCms
 
     extend FriendlyId
     friendly_id :name, use: :slugged
+    validates_uniqueness_of :name
+    validates_uniqueness_of :browser_title
 
     def breadcrumbs
       breadcrumb = %Q(<a href="#{self.slug}">#{self.name}</a>)
